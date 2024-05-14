@@ -1,10 +1,10 @@
-import React from "react";
-import { HeroBanner } from "./components";
+import { HeroBanner, SearchInput } from "./components";
 
 export function Home() {
   return (
     <div>
       <HeroBanner />
+      <SearchInput />
     </div>
   );
 }
