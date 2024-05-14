@@ -1,6 +1,6 @@
 export function Footer() {
   return (
-    <div className="bg-black text-center text-white py-2 scroll-snap">
+    <div className="bg-black text-center text-white py-2 scroll-snap snap-align-none">
       <p>
         Desenvolvido por{" "}
         <a
