@@ -1,4 +1,5 @@
-import { HeroBanner, SearchInput, Accordion } from "./components";
+import { HeroBanner, SearchInput, Accordion, GridCards } from "./components";
+import { Footer } from "../../components/footer";
 
 export function Home() {
   return (
@@ -6,6 +7,8 @@ export function Home() {
       <HeroBanner />
       <Accordion />
       <SearchInput />
+      <GridCards />
+      <Footer />
     </div>
   );
 }

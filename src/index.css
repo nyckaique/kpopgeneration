@@ -125,4 +125,11 @@
   .accordion-btn-5 {
     background-image: url("./assets/5.jpg");
   }
+  .grid-container {
+    @apply max-w-[100%] p-4 grid gap-4 bg-black;
+    grid-template-columns: repeat(
+      auto-fill,
+      minmax(200px, 1fr)
+    ); /* see notes below */
+  }
 }
