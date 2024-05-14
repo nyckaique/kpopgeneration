@@ -1,4 +1,3 @@
-import React from "react";
 import { Card, CardHeader, CardFooter } from "@/components/ui/card";
 import aespa from "../../../assets/4.jpg";
 
