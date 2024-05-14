@@ -96,4 +96,33 @@
   .search-input {
     @apply max-w-[200px];
   }
+  .accordion-container {
+    @apply w-full h-[100vh] flex scroll-snap overflow-hidden;
+  }
+  .accordion-btn {
+    @apply w-full hover:scale-[1.1] bg-cover bg-no-repeat bg-center transition-all grayscale;
+  }
+  .accordion-btn span {
+    @apply hidden w-full h-full text-3xl text-center transition-all; /* Centraliza verticalmente o texto */
+  }
+  .accordion-btn:hover span {
+    @apply block text-white bg-zinc-950 bg-opacity-20;
+    line-height: 100vh;
+    backdrop-filter: blur(2px);
+  }
+  .accordion-btn-1 {
+    background-image: url("./assets/1.jpg");
+  }
+  .accordion-btn-2 {
+    background-image: url("./assets/2.jpg");
+  }
+  .accordion-btn-3 {
+    background-image: url("./assets/3.jpeg");
+  }
+  .accordion-btn-4 {
+    background-image: url("./assets/4.jpg");
+  }
+  .accordion-btn-5 {
+    background-image: url("./assets/5.jpg");
+  }
 }
