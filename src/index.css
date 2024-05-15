@@ -126,16 +126,16 @@
     backdrop-filter: blur(2px);
   }
   .accordion-btn-1 {
-    background-image: url("./assets/1.jpg");
+    background-image: url("./assets/1.jpeg");
   }
   .accordion-btn-2 {
     background-image: url("./assets/2.jpg");
   }
   .accordion-btn-3 {
-    background-image: url("./assets/3.jpeg");
+    background-image: url("./assets/3.png");
   }
   .accordion-btn-4 {
-    background-image: url("./assets/4.jpg");
+    background-image: url("./assets/4.jpeg");
   }
   .accordion-btn-5 {
     background-image: url("./assets/5.jpg");
