@@ -12,7 +12,7 @@ export function GridCards() {
 
   return (
     <div className="bg-black min-h-[90vh]">
-      <div className="scroll-snap snap-none grid-container">
+      <div className="scroll-snap grid-container">
         {search.length > 0
           ? filteredGrupos?.map((grupo: grupo) => (
               <Card

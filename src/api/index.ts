@@ -11,4 +11,11 @@ async function listarGrupos() {
   console.log(grupos);
 }
 
-export { listarGrupos };
+async function listarGrupo(id: string) {
+  const response = await api.get(`/group?id=${id}`);
+  const grupo = response.data;
+  return grupo;
+  console.log(grupo);
+}
+
+export { listarGrupos, listarGrupo };

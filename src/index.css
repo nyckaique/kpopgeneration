@@ -106,7 +106,7 @@
     @apply w-full h-[25%] sm:h-[100vh] hover:scale-[1.1] bg-cover bg-no-repeat bg-center transition-all grayscale flex items-center justify-center overflow-hidden;
   }
   .accordion-btn span {
-    @apply hidden w-full h-[full] text-3xl text-center font-bold transition-all text-white bg-zinc-950 bg-opacity-20;
+    @apply hidden w-full h-[full] text-3xl sm:text-xl lg:text-3xl text-center font-bold transition-all text-white bg-zinc-950 bg-opacity-20;
     line-height: 100vh;
     backdrop-filter: blur(2px);
   }
@@ -158,5 +158,29 @@
   }
   .spotify-container {
     @apply w-full bg-black text-white p-4;
+  }
+  .loader {
+    width: 15px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    animation: l5 1s infinite linear alternate;
+  }
+  @keyframes l5 {
+    0% {
+      box-shadow: 20px 0 #ffffff, -20px 0 #0002;
+      background: #ffffff;
+    }
+    33% {
+      box-shadow: 20px 0 #ffffff, -20px 0 #0002;
+      background: #0002;
+    }
+    66% {
+      box-shadow: 20px 0 #0002, -20px 0 #ffffff;
+      background: #0002;
+    }
+    100% {
+      box-shadow: 20px 0 #0002, -20px 0 #ffffff;
+      background: #ffffff;
+    }
   }
 }

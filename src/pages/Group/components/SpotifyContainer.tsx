@@ -1,13 +1,17 @@
-export function SpotifyContainer() {
+interface SpotifyContainerProps {
+  spotifyUrl: string;
+}
+
+export function SpotifyContainer({ spotifyUrl }: SpotifyContainerProps) {
   return (
     <div className="spotify-container">
       <iframe
-        src="https://open.spotify.com/embed/artist/6YVMFz59CuY7ngCxTxjpxE?utm_source=generator"
+        src={spotifyUrl}
         width="75%"
-        className="m-auto "
+        className="m-auto"
         height="352"
         frameBorder="0"
-        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        allow="clipboard-write; encrypted-media; fullscreen; picture-in-picture"
         loading="lazy"
       ></iframe>
     </div>

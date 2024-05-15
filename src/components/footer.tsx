@@ -4,7 +4,9 @@ export interface InputProps
   extends React.InputHTMLAttributes<HTMLInputElement> {}
 export function Footer(className: InputProps) {
   return (
-    <div className={cn("bg-black text-center text-white py-2", className)}>
+    <div
+      className={cn("bg-black text-center text-white py-4 snap-end", className)}
+    >
       <p>
         Desenvolvido por{" "}
         <a

@@ -8,7 +8,7 @@ export function Home() {
       <Accordion />
       <SearchInput />
       <GridCards />
-      <Footer className="scroll-snap snap-none" />
+      <Footer />
     </div>
   );
 }

@@ -1,35 +1,44 @@
-import aespa from "../../../assets/4.jpg";
-export function InformationContainer() {
+import { grupoCompleto } from "@/context";
+// Definição do tipo das props para o componente SpotifyContainer
+interface InformationContainerProps {
+  grupo: grupoCompleto; // Definindo spotifyUrl como uma prop do tipo string
+}
+
+export function InformationContainer({ grupo }: InformationContainerProps) {
+  const date = new Date(grupo.debut_date);
+  date.setHours(date.getHours() + 4);
   return (
     <div className="information-container">
-      <img src={aespa} alt="" className="information-image" />
+      <img src={grupo?.image_url} alt="" className="information-image" />
       <div className="information-text">
-        <p className="text-3xl">AESPA</p>
-        <p className="font-normal">
-          ARTMS is a five-member South Korean girl group under MODHAUS. The
-          group consists of JinSoul, HaSeul, Kim Lip, HeeJin, and Choerry from
-          the girl group LOONA. The group first re-debuted the sub-unit ODD EYE
-          CIRCLE on July 12, 2023. They will debut on May 31, 2024 with their
-          first full-length album, DALL.
-        </p>
+        <p className="text-3xl">{grupo?.name}</p>
+        <p className="font-normal">{grupo?.description}</p>
         <p className="flex flex-wrap gap-2">
           {"Membros: "}
-          <span className="information-badge">Heejin</span>
+          {grupo?.members.map((member, index) => (
+            <span key={index} className="information-badge">
+              {member}
+            </span>
+          ))}
         </p>
         <p>
           {"Geração: "}
-          <span className="font-normal">5ª</span>
+          <span className="font-normal">{grupo?.generation}ª</span>
         </p>
         <p>
           {"Debut: "}
-          <span className="font-normal">31/05/2024</span>{" "}
+          <span className="font-normal">
+            {date.toLocaleDateString("pt-br")}
+          </span>
         </p>
         <p>
           {"Status: "}
-          <span className="font-normal">grupo ativo</span>{" "}
+          <span className="font-normal">
+            {grupo?.status ? "Grupo ativo" : "Disband"}
+          </span>
         </p>
         <p>
-          {"Empresa: "} <span className="font-normal">MODHAUS</span>
+          {"Empresa: "} <span className="font-normal">{grupo?.company}</span>
         </p>
       </div>
     </div>
