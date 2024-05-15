@@ -1,13 +1,9 @@
 import aespa from "../../../assets/4.jpg";
 export function InformationContainer() {
   return (
-    <div className="w-full p-10 bg-black  text-white flex flex-col gap-4 lg:flex-row items-center lg:items-start justify-evenly">
-      <img
-        src={aespa}
-        alt=""
-        className="w-[400px] h-[400px] rounded-xl object-cover"
-      />
-      <div className="max-w-[400px] flex flex-col gap-4 bg-zinc-800 rounded-xl p-4 font-bold">
+    <div className="information-container">
+      <img src={aespa} alt="" className="information-image" />
+      <div className="information-text">
         <p className="text-3xl">AESPA</p>
         <p className="font-normal">
           ARTMS is a five-member South Korean girl group under MODHAUS. The
@@ -18,63 +14,7 @@ export function InformationContainer() {
         </p>
         <p className="flex flex-wrap gap-2">
           {"Membros: "}
-          <span className="font-normal bg-zinc-500 px-2 py-[2px] rounded-sm">
-            Heejin
-          </span>
-          <span className="font-normal bg-zinc-500 px-2 py-[2px] rounded-sm">
-            Heejin
-          </span>
-          <span className="font-normal bg-zinc-500 px-2 py-[2px] rounded-sm">
-            Heejin
-          </span>
-          <span className="font-normal bg-zinc-500 px-2 py-[2px] rounded-sm">
-            Heejin
-          </span>
-          <span className="font-normal bg-zinc-500 px-2 py-[2px] rounded-sm">
-            Heejin
-          </span>
-          <span className="font-normal bg-zinc-500 px-2 py-[2px] rounded-sm">
-            Heejin
-          </span>
-          <span className="font-normal bg-zinc-500 px-2 py-[2px] rounded-sm">
-            Heejin
-          </span>
-          <span className="font-normal bg-zinc-500 px-2 py-[2px] rounded-sm">
-            Heejin
-          </span>
-          <span className="font-normal bg-zinc-500 px-2 py-[2px] rounded-sm">
-            Heejin
-          </span>
-          <span className="font-normal bg-zinc-500 px-2 py-[2px] rounded-sm">
-            Heejin
-          </span>
-          <span className="font-normal bg-zinc-500 px-2 py-[2px] rounded-sm">
-            Heejin
-          </span>
-          <span className="font-normal bg-zinc-500 px-2 py-[2px] rounded-sm">
-            Heejin
-          </span>
-          <span className="font-normal bg-zinc-500 px-2 py-[2px] rounded-sm">
-            Heejin
-          </span>
-          <span className="font-normal bg-zinc-500 px-2 py-[2px] rounded-sm">
-            Heejin
-          </span>
-          <span className="font-normal bg-zinc-500 px-2 py-[2px] rounded-sm">
-            Heejin
-          </span>
-          <span className="font-normal bg-zinc-500 px-2 py-[2px] rounded-sm">
-            Heejin
-          </span>
-          <span className="font-normal bg-zinc-500 px-2 py-[2px] rounded-sm">
-            Heejin
-          </span>
-          <span className="font-normal bg-zinc-500 px-2 py-[2px] rounded-sm">
-            Heejin
-          </span>
-          <span className="font-normal bg-zinc-500 px-2 py-[2px] rounded-sm">
-            Heejin
-          </span>
+          <span className="information-badge">Heejin</span>
         </p>
         <p>
           {"Geração: "}

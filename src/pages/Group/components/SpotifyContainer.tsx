@@ -2,7 +2,7 @@ import React from "react";
 
 export function SpotifyContainer() {
   return (
-    <div className="w-full bg-black text-white p-4">
+    <div className="spotify-container">
       <iframe
         src="https://open.spotify.com/embed/artist/6YVMFz59CuY7ngCxTxjpxE?utm_source=generator"
         width="75%"

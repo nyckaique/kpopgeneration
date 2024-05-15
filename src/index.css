@@ -97,7 +97,7 @@
     @apply w-full py-4 bg-black;
   }
   .search-input {
-    @apply max-w-[200px];
+    @apply max-w-[200px] bg-zinc-950 text-white;
   }
   .accordion-container {
     @apply w-full h-[100vh] flex flex-col sm:flex-row scroll-snap overflow-hidden bg-black;
@@ -131,5 +131,29 @@
   .grid-container {
     @apply max-w-[100%] p-4 grid gap-4 bg-black;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+  .card {
+    @apply rounded-none py-2 bg-zinc-900 text-white font-bold flex flex-col justify-evenly items-center  hover:scale-[1.05] border-none cursor-pointer w-[200px] max-w-[200px] m-auto;
+  }
+  .card-header {
+    @apply p-0 px-2 max-w-[200px] max-h-[200px];
+  }
+  .card-footer {
+    @apply p-0 px-2 pt-2 text-wrap;
+  }
+  .information-container {
+    @apply w-full p-10 bg-black  text-white flex flex-col gap-4 lg:flex-row items-center lg:items-start justify-evenly;
+  }
+  .information-image {
+    @apply w-[400px] h-[400px] rounded-xl object-cover;
+  }
+  .information-text {
+    @apply max-w-[400px] flex flex-col gap-4 bg-zinc-800 rounded-xl p-4 font-bold;
+  }
+  .information-badge {
+    @apply font-normal bg-zinc-500 px-2 py-[2px] rounded-sm;
+  }
+  .spotify-container {
+    @apply w-full bg-black text-white p-4;
   }
 }
