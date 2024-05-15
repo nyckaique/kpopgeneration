@@ -1,9 +1,7 @@
 import { grupoCompleto } from "@/context";
-// Definição do tipo das props para o componente SpotifyContainer
 interface InformationContainerProps {
-  grupo: grupoCompleto; // Definindo spotifyUrl como uma prop do tipo string
+  grupo: grupoCompleto;
 }
-
 export function InformationContainer({ grupo }: InformationContainerProps) {
   const date = new Date(grupo.debut_date);
   date.setHours(date.getHours() + 4);

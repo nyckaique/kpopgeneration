@@ -17,8 +17,6 @@ export function Group() {
       if (id) {
         const response = await montarGrupo(id!);
         setGrupo(response);
-        console.log("buscou");
-        console.log(response);
       }
     }
     searchGrupo();

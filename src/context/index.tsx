@@ -1,5 +1,5 @@
 import { createContext, useState, useEffect, ReactNode } from "react";
-import { listarGrupos, listarGrupo } from "@/api";
+import { listarGrupos, listarGrupo, listarGeracao } from "@/api";
 
 export interface grupo {
   id: string;
@@ -27,15 +27,23 @@ interface ContextType {
   grupos: grupo[] | undefined;
   filteredGrupos: grupo[] | undefined;
   montarGrupo: (id: string) => Promise<grupoCompleto>;
+  montarGrupos: () => Promise<void>;
+  geracao: string;
+  setGeracao: (geracao: string) => void;
+  montarGeracao: (generation: string) => void;
 }
 
 export const Context = createContext<ContextType | undefined>(undefined);
 export default function Provider({ children }: ProviderProps) {
   const [search, setSearch] = useState<string>("");
   const [grupos, setGrupos] = useState<grupo[]>();
+  const [geracao, setGeracao] = useState<string>("all");
+
   const filteredGrupos =
     search.length > 0
-      ? grupos?.filter((grupo) => grupo.name.includes(search))
+      ? grupos?.filter((grupo) =>
+          grupo.name.toLowerCase().includes(search.toLowerCase())
+        )
       : [];
 
   useEffect(() => {
@@ -50,10 +58,28 @@ export default function Provider({ children }: ProviderProps) {
     const g: grupoCompleto = await listarGrupo(id);
     return g;
   }
+  async function montarGeracao(generation: string) {
+    if (generation === "all") {
+      montarGrupos();
+      return;
+    }
+    const g = await listarGeracao(generation);
+    setGrupos(g);
+  }
 
   return (
     <Context.Provider
-      value={{ search, setSearch, grupos, filteredGrupos, montarGrupo }}
+      value={{
+        search,
+        setSearch,
+        grupos,
+        filteredGrupos,
+        montarGrupo,
+        montarGrupos,
+        montarGeracao,
+        geracao,
+        setGeracao,
+      }}
     >
       {children}
     </Context.Provider>

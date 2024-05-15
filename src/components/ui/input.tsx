@@ -9,7 +9,6 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
   ({ className, type, ...props }, ref) => {
     return (
       <div className="flex items-center justify-center gap-2 no-wrap">
-        <i className="fas fa-search text-white"></i>
         <input
           type={type}
           className={cn(

@@ -8,6 +8,7 @@ export function SearchInput() {
       <Input
         className="search-input"
         onChange={(e) => setSearch(e.target.value)}
+        placeholder="Buscar pelo nome..."
       />
     </div>
   );
