@@ -4,7 +4,7 @@ export function Routes() {
   return (
     <Switch>
       <Route path="/" element={<Home />} />
-      <Route path="/group" element={<Group />} />
+      <Route path="/:id" element={<Group />} />
     </Switch>
   );
 }

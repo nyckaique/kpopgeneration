@@ -1,5 +1,3 @@
-import React from "react";
-
 export function SpotifyContainer() {
   return (
     <div className="spotify-container">

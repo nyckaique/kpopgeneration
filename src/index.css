@@ -136,7 +136,10 @@
     @apply rounded-none py-2 bg-zinc-900 text-white font-bold flex flex-col justify-evenly items-center  hover:scale-[1.05] border-none cursor-pointer w-[200px] max-w-[200px] m-auto;
   }
   .card-header {
-    @apply p-0 px-2 max-w-[200px] max-h-[200px];
+    @apply p-0 px-2 max-w-[200px] max-h-[200px] overflow-hidden;
+  }
+  .card-header-image {
+    @apply rounded-xl max-w-[200px] max-h-[200px] aspect-square object-cover;
   }
   .card-footer {
     @apply p-0 px-2 pt-2 text-wrap;
