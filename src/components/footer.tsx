@@ -1,6 +1,10 @@
-export function Footer() {
+import { cn } from "@/lib/utils";
+
+export interface InputProps
+  extends React.InputHTMLAttributes<HTMLInputElement> {}
+export function Footer(className: InputProps) {
   return (
-    <div className="bg-black text-center text-white py-2 scroll-snap snap-none">
+    <div className={cn("bg-black text-center text-white py-2", className)}>
       <p>
         Desenvolvido por{" "}
         <a

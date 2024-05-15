@@ -1,10 +1,13 @@
 import { BrowserRouter } from "react-router-dom";
 import { Routes } from "./routes";
+import Provider from "@/context";
 function App() {
   return (
-    <BrowserRouter>
-      <Routes />
-    </BrowserRouter>
+    <Provider>
+      <BrowserRouter>
+        <Routes />
+      </BrowserRouter>
+    </Provider>
   );
 }
 
