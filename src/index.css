@@ -94,6 +94,9 @@
     @apply w-[100%] absolute top-0 h-[5vh] overflow-hidden bg-cover bg-no-repeat bg-center;
     background-image: url("./assets/bg.png");
   }
+  .hero-banner-arrow {
+    @apply w-[100%] flex items-center text-center absolute bottom-[10vh] h-[5vh];
+  }
   .scroll-snap {
     @apply snap-start;
   }
@@ -104,7 +107,7 @@
     @apply max-w-[200px] bg-zinc-950 text-white;
   }
   .accordion-container {
-    @apply w-full h-[100vh] flex flex-col sm:flex-row scroll-snap overflow-hidden bg-black;
+    @apply w-full h-[100vh] flex flex-col lg:flex-row scroll-snap overflow-hidden bg-black;
   }
   .accordion-btn {
     @apply w-full h-[25%] sm:h-[100vh] hover:scale-[1.1] bg-cover bg-no-repeat bg-center transition-all grayscale flex items-center justify-center overflow-hidden;
@@ -168,11 +171,28 @@
   .information-badge {
     @apply font-normal bg-zinc-500 px-2 py-[2px] rounded-sm;
   }
+  .ativo {
+    @apply font-normal bg-teal-600 px-2 py-[2px] rounded-sm;
+  }
+  .disband {
+    @apply font-normal bg-rose-600 px-2 py-[2px] rounded-sm;
+  }
   .spotify-container {
     @apply w-full bg-black text-white p-4;
   }
   .pagination {
     @apply w-full flex items-center justify-center gap-2;
+  }
+  .arrow {
+    margin: auto;
+    border: solid white;
+    border-width: 0 10px 10px 0;
+    display: inline-block;
+    padding: 20px;
+  }
+  .down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
   }
   .loader {
     width: 15px;

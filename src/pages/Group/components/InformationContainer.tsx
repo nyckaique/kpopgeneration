@@ -31,7 +31,7 @@ export function InformationContainer({ grupo }: InformationContainerProps) {
         </p>
         <p>
           {"Status: "}
-          <span className="font-normal">
+          <span className={grupo?.status ? "ativo" : "disband"}>
             {grupo?.status ? "Grupo ativo" : "Disband"}
           </span>
         </p>
