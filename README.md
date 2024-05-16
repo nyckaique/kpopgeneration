@@ -1,30 +1,31 @@
-# React + TypeScript + Vite
+# Kpop Generation 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Kpop Generation é um frontend que consome a API de mesmo nome hospedada nesse repositório <https://github.com/nyckaique/kpopgenerationapi/tree/main/>
+O frontend do Kpop Generation está hospedado nesse link <https://kpopgeneration.netlify.app/>
 
-Currently, two official plugins are available:
+## Instalação
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Para utilizar esse Front End é necessário que voce tenha instalado as seguintes ferramentas:
 
-## Expanding the ESLint configuration
+- Node JS
+- Vite
+- Axios
+- React-router-dom
+- Tailwind
+- Shadcn
+- Eslint
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Utilize o NPM para instalar essas dependências
 
-- Configure the top-level `parserOptions` property like this:
+## Uso
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+Esse projeto é basicamente um frontend que consome um serviço de API com AXIOS.
+O projeto consiste em um Context Provider para gerenciar as informações de estado e consultas na API e providenciá-las às duas paginas de Home e Group.
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Licença e Créditos
+
+Esse projeto foi feito por [Nycollas Kaique](https://linkedin.com/in/nycollaskaique) e é um projeto pessoal para o portfólio.
+
+Por favor, caso tenha acesso a esse projeto, preserve os dados sensíveis contidos nele, como informações do acesso ao banco de dados.
+
+[MIT](https://choosealicense.com/licenses/mit/)
